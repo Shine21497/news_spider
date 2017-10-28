@@ -134,7 +134,7 @@ public class News_Spider implements PageProcessor {
                 urls.add(scanner.nextLine());
             }
 
-            Spider.create(new News_Spider()).startUrls(urls).addPipeline(new ConsolePipeline()).addPipeline(new MysqlPipline()).thread(1).run();
+            Spider.create(new News_Spider()).startUrls(urls).addPipeline(new ConsolePipeline()).addPipeline(new MysqlPipline()).thread(5).run();
         }catch(Exception e)
         {
 
